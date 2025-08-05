@@ -25,43 +25,78 @@ let jokers = [
   {
     name: "Kairi",
     text: [
-			"Earn {C:money}$1{} at end of round",
-			"for each {C:attention}Joker{} card",
+        '{C:attention}Retrigger{} all played',
+        'cards with {C:diamonds}light suit{}',
+        '{C:inactive}Joker flips at end of round'
     ],
     image_url: "img/kairi.png",
-    rarity: "Common"
+    rarity: "Uncommon"
+  },
+
+  {
+    name: "Naminé",
+    text: [
+        '{C:attention}Retrigger{} all played',
+        'cards with {C:spades}dark  suit{}',
+        '{C:inactive}Joker flips at end of round'
+    ],
+    image_url: "img/namine.png",
+    rarity: "Uncommon"
   },
 
   {
     name: "Roxas",
     text: [
-			"This Joker gains {C:chips}+7{} Chips",
+			"This Joker gains {C:chips}+13{} Chips",
 			"every {C:attention}13{} {C:inactive}[13]{} cards discarded",
     ],
     image_url: "img/roxas.png",
     rarity: "Uncommon"
   },
-  
+
   {
-    name: "Naminé",
+    name: "BryceTheNobody",
     text: [
-			"{C:enhanced}Doubles{} values of leftmost {C:attention}Joker{}",
-			"and applies a {C:spectral}Perishable{} sticker",
-			"after defeating a {C:attention}boss blind",
+			"Every played {C:hearts}Heart{} card",
+			"Has a {C:green}1 in 2{} chance",
+			"to permanently gain",
+			"{C:mult}+3{} Mult when scored",
     ],
-    image_url: "img/namine.png",
-    rarity: "Rare"
+    image_url: "img/brycethenobody.png",
+    rarity: "Uncommon"
   },
 
   {
     name: "Axel",
     text: [
-			"Halves all {C:attention}listed{}",
-			"{C:green,E:1}probabilities",
-			"{C:inactive}(ex: {C:green}1 in 2{}{C:inactive} -> {C:green}0.5 in 2{}{C:inactive}){} ",
+				"{C:enhanced}Doubles{} values of leftmost {C:attention}Joker{}",
+				"and applies a {C:spectral}Perishable{} sticker",
+				"after defeating a {C:attention}boss blind",
     ],
     image_url: "img/axel.png",
     rarity: "Uncommon"
+  },
+
+  {
+    name: "Half Face",
+    text: [
+			"Gives {C:chips}+130{} Chips for each",
+			"{C:attention}face{} card in played hand",
+			"that {C:attention}does not score{}",
+    ],
+    image_url: "img/xigbar.png",
+    rarity: "Common"
+  },
+  
+  {
+    name: "Meeska Mooska",
+    text: [
+			"Every scored {C:attention}King{} has a",
+			"{C:green}1 in 2{} chance to gain",
+			"{C:chips}+4{} Chips and {X:mult,C:white}X0.25{} Mult",
+    ],
+    image_url: "img/mickey.png",
+    rarity: "Rare"
   },
 
   {
@@ -77,7 +112,7 @@ let jokers = [
   {
     name: "Goofy",
     text: [
-			"Gives {C:mult}+3{} Mult",
+			"Gives {C:mult}+7{} Mult",
 			"for each {C:attention}wild{} card",
 			"in your {C:attention}full deck{}",
     ],
@@ -86,26 +121,47 @@ let jokers = [
   },
 
   {
-    name: "Meeska Mooska",
-    text: [
-			"Every scored {C:attention}King{} has a",
-			"{C:green}1 in 2{} chance to gain",
-			"{C:chips}+4{} Chips and {X:mult,C:white}X0.25{} Mult",
-    ],
-    image_url: "img/mickey.png",
-    rarity: "Rare"
-  },
-
-  {
     name: "Master Yen Sid",
     text: [
-			"{C:green}1 in 3{} chance to",
-			"create a {C:dark_edition}Negative{}",
-			"{C:planet}Planet{} card when a",
-			"{C:purple}Tarot{} card is used",
+			    "{C:green}1 in 3{} chance to",
+					"upgrade level of a",
+					"random {C:attention}poker hand{} when",
+					"a {C:purple}Tarot{} card is used",
     ],
     image_url: "img/disney.png",
     rarity: "Common"
+  },
+
+  {
+    name: "Keyblade",
+    text: [
+			"If {C:attention}first hand{} of round is",
+			"a single {C:attention}7{}, destroy it and",
+			"create a {C:dark_edition}random {}{C:attention}Tag{}",
+    ],
+    image_url: "img/keyblade.png",
+    rarity: "Common"
+  },
+
+  {
+    name: "Paopu Fruit",
+    text: [
+			"Retrigger all played {C:diamonds}Diamond{} cards",
+			"{C:green}1 in 7{} chance this card is",
+			"eaten at the end of the round",
+    ],
+    image_url: "img/paopufruit.png",
+    rarity: "Uncommon"
+  },
+
+  {
+    name: "Seal Salt Ice Cream",
+    text: [
+			"Cards with a {C:blue}Blue Seal{}",
+			"trigger when {C:attention}scored",
+    ],
+    image_url: "img/sealsalt.png",
+    rarity: "Uncommon"
   },
 
   {
@@ -119,60 +175,78 @@ let jokers = [
   },
 
   {
-    name: "Keyblade",
+    name: "Moogle",
     text: [
-			"If {C:attention}first hand{} of round is",
-			"a single {C:attention}7{}, destroy it and",
-			"create a {C:dark_edition}random {}{C:attention}Tag{}",
+			"Earn {C:money}$1{} at end of round",
+			"for each {C:attention}Joker{} card",
     ],
-    image_url: "img/keyblade.png",
+    image_url: "img/moogle.png",
     rarity: "Common"
   },
-  
-  
+
   {
-    name: "Seal Salt Ice Cream",
+    name: "Chip and Dale",
     text: [
-			"Cards with a {C:blue}Blue Seal{}",
-			"trigger when {C:attention}scored",
+					"{C:attention}Sell{} this card to",
+          "create {C:attention}1{} {C:uncommon}Uncommon{} Jokers",
+          "increases by 1 every {C:attention}2{} rounds",
     ],
-    image_url: "img/sealsalt.png",
+    image_url: "img/gummiphone.png",
     rarity: "Uncommon"
   },
   
   {
-    name: "Paopu Fruit",
+    name: "Luxord",
     text: [
-			"Retrigger all played {C:diamonds}Diamond{} cards",
-			"{C:green}1 in 7{} chance this card is",
-			"eaten at the end of the round",
+					'Gains {C:chips}+5{} Chips for each',
+					'{C:attention}second{} passed this round,',
+					'{C:red,E:2,s:1.1}self destructs at 100 Chips',
+					'Each scored card',
+					'increases the cap by {C:green}10{}',
     ],
-    image_url: "img/paopufruit.png",
-    rarity: "Uncommon"
-  },
-  
-  {
-    name: "Half Face",
-    text: [
-			"Gives {C:chips}+75{} Chips for each",
-			"{C:attention}face{} card in played hand",
-			"that {C:attention}does not score{}",
-    ],
-    image_url: "img/xigbar.png",
+    image_url: "img/luxord.png",
     rarity: "Common"
   },
   
+  {
+    name: "Kingdom Hearts 1",
+    text: [
+					"{C:chips}+100{} Chips",
+					"Score at least 2x the blind requirements in one",
+					"hand to {C:attention}level up{}",
+    ],
+    image_url: "img/kh1.png",
+    rarity: "Uncommon"
+  },
+
+  {
+    name: "Kingdom Hearts 2",
+    text: [
+					"{C:mult}+25{} Mult",
+					"Score at least 2x the blind requirements in one",
+					"hand 3 times to {C:attention}level up{}",
+    ],
+    image_url: "img/kh2.png",
+    rarity: "Uncommon"
+  },
     
   {
-    name: "BryceTheNobody",
+    name: "Kingdom Hearts 3",
     text: [
-			"Every played {C:hearts}Heart{} card",
-			"Has a {C:green}1 in 2{} chance",
-			"to permanently gain",
-			"{C:mult}+3{} Mult when scored",
+					"{X:mult,C:white}X3{} Mult"
     ],
-    image_url: "img/brycethenobody.png",
+    image_url: "img/kh3.png",
     rarity: "Uncommon"
+  },
+
+  {
+    name: "Help Wanted!",
+    text: [
+					"Complete a task to get a prize!.",
+					"New task appears after each completion.",
+    ],
+    image_url: "img/helpwanted.png",
+    rarity: "Rare"
   },
 
 ]
@@ -180,29 +254,21 @@ let jokers = [
 // works the same. 
 let consumables = [
   {
-     name: "Keyblade",
+     name: "Awakening",
      text: [
-			"Converts up to",
-			"{C:attention}5{} selected cards",
-			"into {C:dark_edition}random {}{C:attention}Ranks{}"
+				"Creates a random",
+				"{C:attention}Kingdom Hearts Joker{}",
+				"{C:inactive}[Must have room]",
      ],
      image_url: "img/tarotblade.png",
      rarity: "Tarot"
    },
-  // {
-  //   name: "Joker",
-  //   text: [
-  //     "{C:mult}+4{} Mult"
-  //   ],
-  //   image_url: "img/j_joker.png",
-  //   rarity: "Planet"
-  // },
+
    {
      name: "Sorcerer",
      text: [
-			"Creates a {C:dark_edition}Negative{} ",
-			"{C:green}Uncommon{} {C:attention}Joker,{}",
-			"{C:red}-1{} Hand Size"
+					"Select {C:attention}1{} card to",
+					"apply {C:attention}Lucky Seal{}"
      ],
      image_url: "img/sorcerer.png",
      rarity: "Spectral"
@@ -237,59 +303,44 @@ let card_modifications = [
   //   image_url: "img/j_joker.png",
   //   rarity: "Edition"
   // },
-  // {
-  //   name: "Joker",
-  //   text: [
-  //     "{C:mult}+4{} Mult"
-  //   ],
-  //   image_url: "img/sticker_example.png",
-  //   rarity: "Seal"
-  // },
+   {
+     name: "Lucky Emblem",
+     text: [
+        "Increases rank of card by 1",
+        "when {C:attention}discarded{} and converts",
+        "it to your {C:attention}most common{}",
+        "suit in your {C:attention}full deck{}",
+     ],
+     image_url: "img/luckyemblem.png",
+     rarity: "Seal"
+   },
 ]
 
 let decks = [
-  // {
-  //   name: "Joker",
-  //   text: [
-  //     "{C:mult}+4{} Mult"
-  //   ],
-  //   image_url: "img/j_joker.png",
-  //   rarity: "Deck"
-  // },
+  {
+     name: "Kingdom Deck",
+     text: [
+					"Kingdom Hearts Jokers are",
+					"3X more likely to appear"
+     ],
+     image_url: "img/decks.png",
+     rarity: "Deck"
+   },
 ]
 
 let stickers = [
-  // {
-  //   name: "Joker",
-  //   text: [
-  //     "{C:mult}+4{} Mult"
-  //   ],
-  //   image_url: "img/sticker_example.png",
-  //   rarity: "Sticker"
-  // },
 ]
 
 let blinds = [
-  // {
-  //   name: "The Wall",
-  //   text: [
-  //     "Extra large blind",
-  //     "{C:inactive}({C:red}4x{C:inactive} Base for {C:attention}$$$$${C:inactive})",
-  //     "{C:inactive}(Appears from Ante 2)"
-  //   ],
-  //   image_url: "img/the_wall.png",
-  //   rarity: "Boss Blind"
-  // },
-  // {
-  //   name: "Violet Vessel",
-  //   text: [
-  //     "Very large blind",
-  //     "{C:inactive}({C:red}6x{C:inactive} Base for {C:attention}$$$$$$$${C:inactive})",
-  //     "{C:inactive}(Appears from Ante 8)"
-  //   ],
-  //   image_url: "img/violet_vessel.png",
-  //   rarity: "Showdown"
-  // },
+   {
+     name: "Shuffled",
+     text: [
+            'Shuffles Jokers',
+            'When hand is played',
+     ],
+     image_url: "img/shuffled.png",
+     rarity: "Boss Blind"
+   },
 ]
 
 let shop_items = [
