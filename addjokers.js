@@ -13,10 +13,8 @@ let jokers = [
   {
     name: "Riku",
     text: [
-			"Gains {C:chips}+1{} Chips and {C:mult}+1{} Mult",
-			"for each scored {C:spades}Spade{} or {C:clubs}Club{}",
-			"Loses {C:chips}-1{} Chips and {C:mult}-1{} Mult",
-			"for each scored {C:diamonds}Diamond{} or {C:hearts}Heart{}",
+					'Levels up most played hand',
+					'by 1 every {C:attention}4{} {C:green}rerolls',
     ],
     image_url: "img/riku.png",
     rarity: "Uncommon"
@@ -25,8 +23,8 @@ let jokers = [
   {
     name: "Kairi",
     text: [
-        '{C:attention}Retrigger{} all played',
-        'cards with {C:diamonds}light suit{}',
+					"{C:chips}+1{} Chip per {C:diamonds}Light Suit{} scored",
+					"{C:chips}-1{} Chip {C:spades}Dark Suit{} scored",
         '{C:inactive}Joker flips at end of round'
     ],
     image_url: "img/kairi.png",
@@ -36,8 +34,8 @@ let jokers = [
   {
     name: "Naminé",
     text: [
-        '{C:attention}Retrigger{} all played',
-        'cards with {C:spades}dark  suit{}',
+					"{C:mult}+1{} Mult per {C:spades}Dark Suit{} scored",
+					"{C:mult}-1{} Mult per {C:diamonds}Light Suit{} scored",
         '{C:inactive}Joker flips at end of round'
     ],
     image_url: "img/namine.png",
