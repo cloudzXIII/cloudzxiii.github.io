@@ -72,7 +72,7 @@ let jokers = [
 				"after defeating a {C:attention}boss blind",
     ],
     image_url: "img/axel.png",
-    rarity: "Uncommon"
+    rarity: "Rare"
   },
 
   {
@@ -94,7 +94,7 @@ let jokers = [
 			"{C:chips}+4{} Chips and {X:mult,C:white}X0.25{} Mult",
     ],
     image_url: "img/mickey.png",
-    rarity: "Rare"
+    rarity: "Uncommon"
   },
 
   {
