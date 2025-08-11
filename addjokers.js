@@ -110,7 +110,7 @@ let jokers = [
   {
     name: "Wild Goofy",
     text: [
-					"{C:attention}Wild{} Cards give {C:green}1 of 4{}",
+					"{C:attention}Wild{} Cards give",
 					"random bonuses",
 					"when they score:",
 					"{s:0.8,X:mult,C:white}X1.3{} {s:0.8}Mult, {s:0.8,C:money}$1{}",
