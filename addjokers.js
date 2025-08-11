@@ -108,11 +108,13 @@ let jokers = [
   },
 
   {
-    name: "Goofy",
+    name: "Wild Goofy",
     text: [
-			"Gives {C:mult}+7{} Mult",
-			"for each {C:attention}wild{} card",
-			"in your {C:attention}full deck{}",
+					"{C:attention}Wild{} Cards give {C:green}1 of 4{}",
+					"random bonuses",
+					"when they score:",
+					"{s:0.8,X:mult,C:white}X1.3{} {s:0.8}Mult, {s:0.8,C:money}$1{}",
+					"{s:0.8,C:mult}+7{} {s:0.8}Mult, {s:0.8,C:chips}+13{} {s:0.8}Chips",
     ],
     image_url: "img/goofy.png",
     rarity: "Uncommon"
@@ -136,6 +138,7 @@ let jokers = [
 			"If {C:attention}first hand{} of round is",
 			"a single {C:attention}7{}, destroy it and",
 			"create a {C:dark_edition}random {}{C:attention}Tag{}",
+      "{s:0.8}Rank changes every round",
     ],
     image_url: "img/keyblade.png",
     rarity: "Common"
@@ -201,6 +204,8 @@ let jokers = [
 					'{C:red,E:2,s:1.1}self destructs at 100 Chips',
 					'Each scored card',
 					'increases the cap by {C:green}10{}',
+					'Each hand increases the',
+					'total Chips gained by {C:green}1{}',
     ],
     image_url: "img/luxord.png",
     rarity: "Common"
@@ -221,8 +226,9 @@ let jokers = [
     name: "Kingdom Hearts 2",
     text: [
 					"{C:mult}+25{} Mult",
-					"Score at least 2x the blind requirements in one",
-					"hand 3 times to {C:attention}level up{}",
+					"Play a {C:attention}Flush{}",
+					"3 times to {C:attention}level up{}",
+					"{s:0.8}Poker Hand changes every round",
     ],
     image_url: "img/kh2.png",
     rarity: "Uncommon"
@@ -242,9 +248,29 @@ let jokers = [
     text: [
 					"Complete a task to get a prize!.",
 					"New task appears after each completion.",
+          "{C:red,E:2,s:1}Self Destructs when no tasks remain",
     ],
     image_url: "img/helpwanted.png",
     rarity: "Rare"
+  },
+
+  {
+    name: "Munny Pouch",
+    text: [
+			"Press {C:green}Withdraw{}",
+			"to spawn {C:attention}Munny{}",
+    ],
+    image_url: "img/munnypouch.png",
+    rarity: "Uncommon"
+  },
+
+  {
+    name: "Munny",
+    text: [
+					"{C:inactive}Does nothing..?"
+    ],
+    image_url: "img/munny.png",
+    rarity: "Common"
   },
 
 ]
