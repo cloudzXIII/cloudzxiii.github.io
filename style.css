@@ -40,6 +40,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
+
 .cards {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
@@ -64,6 +65,12 @@ h1 {
   height: 190px;
   image-rendering: pixelated;
 }
+
+.partners img {
+  width: 92px;
+  height: 116px;
+  image-rendering: pixelated; /* optional if you want crisp pixels */
+}
 img.hasback {
   background-image: url("img/sticker_bg.png");
   background-size: 142px 190px;
@@ -80,8 +87,47 @@ img.hasback {
   animation-timing-function: steps(20, start);
 }
 
+/* Animating Jokers */
+@keyframes joker-animate {
+  from { object-position: 0 0; }
+  to { object-position: -1278px 0; } 
+}
+
+.animated img {
+  width: 142px;
+  height: 190px;
+  object-fit: cover;
+  object-position: 0 0;
+  animation: joker-animate 5.85s infinite;
+  animation-timing-function: steps(9, end);
+}
+
+@keyframes joker-animate-new {
+  from { object-position: 0 0; }
+  to { object-position: -568px 0; }
+}
+
+.animatednew img {
+  width: 142px;
+  height: 190px;
+  object-fit: cover;
+  object-position: 0 0;
+  animation: joker-animate-new 5.85s infinite;
+  animation-timing-function: steps(4, end);
+}
+
 #download {
   background-color: #374244;
+  color: white;
+  padding: 1rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#download2 {
+  background-color: #5865F2;
   color: white;
   padding: 1rem;
   border: 2px solid white;

@@ -78,20 +78,21 @@ let jokers = [
   {
     name: "Half Face",
     text: [
-			"Gives {C:chips}+130{} Chips for each",
-			"{C:attention}face{} card in played hand",
-			"that {C:attention}does not score{}",
+				"This Joker gains {X:mult,C:white}X0.2{} Mult",
+				"for each {C:attention}face{} card in played",
+				"hand that {C:attention}does not score{}",
     ],
     image_url: "img/xigbar.png",
-    rarity: "Common"
+    rarity: "Uncommon"
   },
   
   {
     name: "Meeska Mooska",
     text: [
-			"Every scored {C:attention}King{} has a",
-			"{C:green}1 in 2{} chance to gain",
-			"{C:chips}+4{} Chips and {X:mult,C:white}X0.25{} Mult",
+				"{C:green}1 in 4{} chance",
+				"for {C:attention}first{} and {C:attention}last{}",
+				"played cards to become",
+				"{C:attention}Kings{} when scored",
     ],
     image_url: "img/mickey.png",
     rarity: "Uncommon"
@@ -123,7 +124,7 @@ let jokers = [
   {
     name: "Master Yen Sid",
     text: [
-			    "{C:green}1 in 3{} chance to",
+			    "{C:green}1 in 2{} chance to",
 					"upgrade level of a",
 					"random {C:attention}poker hand{} when",
 					"a {C:purple}Tarot{} card is used",
@@ -147,9 +148,10 @@ let jokers = [
   {
     name: "Paopu Fruit",
     text: [
-			"Retrigger all played {C:diamonds}Diamond{} cards",
-			"{C:green}1 in 7{} chance this card is",
-			"eaten at the end of the round",
+				"Add a random {C:dark_edition}Edition{},",
+				"{C:dark_edition}Enhancement{}, and {C:attention}Seal{} to",
+				"first scored card for",
+				"the next {C:attention}5{} hands",
     ],
     image_url: "img/paopufruit.png",
     rarity: "Uncommon"
@@ -158,8 +160,10 @@ let jokers = [
   {
     name: "Seal Salt Ice Cream",
     text: [
-			"Cards with a {C:blue}Blue Seal{}",
-			"trigger when {C:attention}scored",
+				"If played hand contains",
+				"a card with a {C:attention}seal{}, add a",
+				"random {C:attention}seal{} to a random",
+				"{C:attention} playing card{} held in hand",
     ],
     image_url: "img/sealsalt.png",
     rarity: "Uncommon"
@@ -186,11 +190,11 @@ let jokers = [
   },
 
   {
-    name: "Chip and Dale",
+    name: "Gummi Phone",
     text: [
-					"{C:attention}Sell{} this card to",
-          "create {C:attention}1{} {C:uncommon}Uncommon{} Jokers",
-          "increases by 1 every {C:attention}2{} rounds",
+					"When {C:attention}Blind{} is selected,",
+					"add {C:attention}one tenth{} of the chips",
+					"in {C:attention}last played{} hand to this {C:red}Mult",
     ],
     image_url: "img/gummiphone.png",
     rarity: "Uncommon"
@@ -199,11 +203,13 @@ let jokers = [
   {
     name: "Luxord",
     text: [
-					'Gains {C:chips}+5{} Chips for each',
+					'Gains {C:chips}+1{} Chips for each',
 					'{C:attention}second{} passed this round,',
 					'{C:red,E:2,s:1.1}self destructs at 100 Chips',
+          '',
 					'Each scored card',
 					'increases the cap by {C:green}10{}',
+          '',
 					'Each hand increases the',
 					'total Chips gained by {C:green}1{}',
     ],
@@ -215,8 +221,9 @@ let jokers = [
     name: "Kingdom Hearts 1",
     text: [
 					"{C:chips}+100{} Chips",
-					"Score at least 2x the blind requirements in one",
-					"hand to {C:attention}level up{}",
+					"Win a blind in one",
+					"hand to {C:legendary}level up{}",
+					"{C:inactive}(Next level: {C:mult}+25{C:inactive} Mult)",
     ],
     image_url: "img/kh1.png",
     rarity: "Uncommon"
@@ -226,9 +233,9 @@ let jokers = [
     name: "Kingdom Hearts 2",
     text: [
 					"{C:mult}+25{} Mult",
-					"Play a {C:attention}Flush{}",
-					"3 times to {C:attention}level up{}",
-					"{s:0.8}Poker Hand changes every round",
+					"Discard {C:attention}13{} {C:inactive}[13]{}",
+					"cards to {C:legendary}level up{}",
+          "{C:inactive}(Next level: {X:mult,C:white}X3{C:inactive} Mult)",
     ],
     image_url: "img/kh2.png",
     rarity: "Uncommon"
@@ -255,10 +262,27 @@ let jokers = [
   },
 
   {
+    name: "Joker Menu",
+    text: [
+					"When a {C:attention}Blind{} is selected,",
+					"this Joker  cycles through",
+					"it's {C:attention}modes{}:",
+          "{C:inactive}Check the mod...?",
+    ],
+    image_url: "img/commands.png",
+    rarity: "Rare"
+  },
+
+  {
     name: "Munny Pouch",
     text: [
-			"Press {C:green}Withdraw{}",
-			"to spawn {C:attention}Munny{}",
+					"Gains {C:money}$1-$5{} of",
+					"{C:money}sell value{} at",
+					"end of round, {C:green}1 in 8{} chance",
+					"this Joker is {C:red}Stolen!{}",
+          '',
+					"Sell this Joker",
+					"to create {C:attention}Munny{}",
     ],
     image_url: "img/munnypouch.png",
     rarity: "Uncommon"
@@ -267,17 +291,110 @@ let jokers = [
   {
     name: "Munny",
     text: [
-					"{C:inactive}Does nothing..?"
+					"Earn {C:money}$[pouch sell value]{} at",
+					"end of round",
+					"Decreases by {C:red}$1{} every round."
     ],
     image_url: "img/munny.png",
     rarity: "Common"
   },
 
+  {
+    name: "Let Him Cook",
+    text: [
+					"Multiply values of",
+					"adjacent {C:attention}Jokers{}",
+					"by {X:red,C:white}X1.5{}",
+    ],
+    image_url: "img/lethimcook.png",
+    rarity: "Rare"
+  },
+
+  {
+    name: "Random Joker",
+    text: [
+					"All cards {C:attention}held in hand{}",
+					"count in scoring",
+					"with a {C:green}1 in 4{} chance",
+					"to retrigger",
+    ],
+    image_url: "img/randomjoker.png",
+    rarity: "Rare"
+  },
+
+  {
+    name: "Invitation",
+    text: [
+					"Gain {C:money}$1{}",
+					"for every card sold,",
+					"Create a {C:dark_edition}Negative{} {C:spectral}Perishable{} Joker",
+					"every {C:attention}3{} {C:inactive}(3){} {C:attention}Jokers{} sold",
+    ],
+    image_url: "img/invitation.png",
+    rarity: "Common"
+  },
+
+  {
+    name: "Munny Magnet",
+    text: [
+					"Unused Hands/Discards",
+					"this ante",
+					"carry over to",
+					"the {C:attention}boss blind{}",
+    ],
+    image_url: "img/munnymagnet.png",
+    rarity: "Rare"
+  },
 ]
 
+let partners = [
+    {
+     name: "Sora",
+     text: [
+					"Every played {C:hearts}Heart{} card",
+					"permanently gains",
+					"{X:mult,C:white}X0.1{} Mult when scored.",
+     ],
+     image_url: "img/SoraPartner.png",
+     rarity: "Partner"
+   },
+
+    {
+     name: "Donald",
+     text: [
+					"Copies the ability of a",
+					"random {C:attention}Joker{}",
+					"every hand played",
+     ],
+     image_url: "img/DonaldPartner.png",
+     rarity: "Partner"
+   },
+
+    {
+     name: "Mickey",
+     text: [
+					"The first scoring card",
+					"has a {C:green}1 in 2{} chance",
+					"to become a {C:attention}King{}",
+     ],
+     image_url: "img/MickeyPartner.png",
+     rarity: "Partner"
+   },
+
+    {
+     name: "Random Partner",
+     text: [
+					"First and Last",
+					"cards {C:attention}held in hand{}",
+					"count in scoring",
+     ],
+     image_url: "img/RandomPartner.png",
+     rarity: "Partner"
+   },
+]
 // works the same. 
 let consumables = [
-  {
+    {
      name: "Awakening",
      text: [
 				"Creates a random",
@@ -330,26 +447,79 @@ let card_modifications = [
    {
      name: "Lucky Emblem",
      text: [
+					"When {C:attention}scored{}, convert",
+					"a card {C:attention}held in hand{}",
+					"into this card's {C:attention}rank{]}",
+					"and {C:attention}suit{}"
+     ],
+     image_url: "img/luckyemblem.png",
+     rarity: "Seal"
+   },
+   {
+     name: "Kingdom Seal",
+     text: [
         "Increases rank of card by 1",
         "when {C:attention}discarded{} and converts",
         "it to your {C:attention}most common{}",
         "suit in your {C:attention}full deck{}",
      ],
-     image_url: "img/luckyemblem.png",
+     image_url: "img/kingdomseal.png",
      rarity: "Seal"
    },
-]
-
-let decks = [
-  {
+    {
      name: "Kingdom Deck",
      text: [
 					"Kingdom Hearts Jokers are",
-					"3X more likely to appear"
+					"3X more likely to appear",
+					"Start run with",
+					"{C:attention}Overstock{}",
      ],
      image_url: "img/decks.png",
      rarity: "Deck"
    },
+
+    {
+     name: "Fair Game Deck",
+     text: [
+					"When a hand is played",
+					"{C:attention}Flip{} a {C:money}Coin{}",
+					"If {C:attention}Heads{}, doubles",
+					"base chips and mult",
+					"If {C:attention}Tails{}, halves",
+					"base chips and mult"
+     ],
+     image_url: "img/fairgame.png",
+     rarity: "Deck"
+   },
+
+    {
+     name: "Kingdom Sleeve",
+     text: [
+					"Kingdom Hearts Jokers are",
+					"3X more likely to appear",
+					"Start run with",
+					"{C:attention}Overstock{}",
+          "{C:inactive}and Overstock Plus if paired with Kingdom Deck"
+     ],
+     image_url: "img/cardsleeves.png",
+     rarity: "Sleeve"
+   },
+    {
+     name: "Fair Game Sleeve",
+     text: [
+					"When a hand is played",
+					"{C:attention}Flip{} a {C:money}Coin{}",
+					"If {C:attention}Heads{}, doubles",
+					"base chips and mult",
+					"If {C:attention}Tails{}, halves",
+					"base chips and mult"
+     ],
+     image_url: "img/fairsleeve.png",
+     rarity: "Sleeve"
+   },
+]
+
+let decks = [
 ]
 
 let stickers = [
@@ -367,15 +537,43 @@ let blinds = [
    },
 ]
 
+let animated = [
+  {
+    name: "Let Him Cook",
+    text: [
+					"Multiply values of",
+					"adjacent {C:attention}Jokers{}",
+					"by {X:red,C:white}X1.5{}",
+    ],
+    image_url: "img/lethimcook.png",
+    rarity: "Rare"
+  },
+]
+
+let animatednew = [
+  {
+    name: "Joker Menu",
+    text: [
+					"When a {C:attention}Blind{} is selected,",
+					"this Joker  cycles through",
+					"it's {C:attention}modes{}:",
+          "{C:inactive}Check the mod...?",
+    ],
+    image_url: "img/commands.png",
+    rarity: "Rare"
+  },
+]
+
 let shop_items = [
-//  {
-//    name: "Joker",
-//    text: [
-//      "{C:mult}+4{} Mult"
-//    ],
-//    image_url: "img/j_joker.png",
-//    rarity: "Voucher"
-//  },
+  {
+    name: "Moogle Shop",
+    text: [
+        "Enter the {C:attention}Shop{}",
+        "when a {C:attention}Blind{} is skipped"
+    ],
+    image_url: "img/voucher.png",
+    rarity: "Voucher"
+  },
 //  {
 //    name: "Joker",
 //    text: [
@@ -447,6 +645,8 @@ let rarities = {
   "Sticker": "#5d5dff",
   "Boss Blind": "#5d5dff",
   "Showdown": "#4584fa",
+  "Partner" : "#366999",
+  "Sleeve" : "#0047AA"
 }
 
 regex = /{([^}]+)}/g;
@@ -454,16 +654,14 @@ regex = /{([^}]+)}/g;
 let add_cards_to_div = (jokers, jokers_div) => {
   for (let joker of jokers) {
     console.log("adding joker", joker.name);
-  
-    joker.text = joker.text.map((line) => { return line + "{}"});
-  
+
+    // process text
+    joker.text = joker.text.map((line) => { return line + "{}"; });
     joker.text = joker.text.join("<br/>");
     joker.text = joker.text.replaceAll("{}", "</span>");
-    joker.text = joker.text.replace(regex, function replacer(match, p1, offset, string, groups) {
+    joker.text = joker.text.replace(regex, function replacer(match, p1) {
       let classes = p1.split(",");
-  
       let css_styling = "";
-  
       for (let i = 0; i < classes.length; i++) {
         let parts = classes[i].split(":");
         if (parts[0] === "C") {
@@ -472,12 +670,24 @@ let add_cards_to_div = (jokers, jokers_div) => {
           css_styling += `background-color: ${cols[parts[1].toUpperCase()]}; border-radius: 5px; padding: 0 5px;`;
         }
       }
-  
       return `</span><span style='${css_styling}'>`;
     });
-  
+
+    // create div
     let joker_div = document.createElement("div");
     joker_div.classList.add("joker");
+
+    // add animated class if in animated array
+    if (animated.some(a => a.name === joker.name)) {
+      joker_div.classList.add("animated");
+    }
+
+    if (animatednew.some(a => a.name === joker.name)) {
+      joker_div.classList.add("animatednew");
+    }
+
+
+    // set inner HTML
     if (joker.rarity === "Sticker" || joker.rarity == "Seal") {
       joker_div.innerHTML = `
         <h3>${joker.name}</h3>
@@ -503,9 +713,17 @@ let add_cards_to_div = (jokers, jokers_div) => {
         <div class="text">${joker.text}</div>
       `;
     }
-  
+
     jokers_div.appendChild(joker_div);
   }
+}
+
+
+if (partners.length === 0) {
+  document.querySelector(".partnersfull").style.display = "none"
+} else {
+  let partners_div = document.querySelector(".partners");
+  add_cards_to_div(partners, partners_div);
 }
 
 if (jokers.length === 0) {
