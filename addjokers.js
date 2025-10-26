@@ -333,17 +333,39 @@ let jokers = [
     image_url: "img/invitation.png",
     rarity: "Common"
   },
-
   {
     name: "Munny Magnet",
+    text: [
+					"Steel cards are moved",
+					"to the top of",
+					"your {C:attention}full deck{}",
+					"and give {C:money}$3{}",
+					"when triggered",
+    ],
+    image_url: "img/munnymagnet.png",
+    rarity: "Rare"
+  },
+  {
+    name: "Kingdom Hearts",
     text: [
 					"Unused Hands/Discards",
 					"this ante",
 					"carry over to",
 					"the {C:attention}boss blind{}",
     ],
-    image_url: "img/munnymagnet.png",
+    image_url: "img/kingdomhearts.png",
     rarity: "Rare"
+  },
+    {
+    name: "Tamagotchi",
+    text: [
+					"Destroy all held consumables",
+          "at the end of the {C:attention}shop",
+					"gains {X:mult,C:white}X0.1{} for",
+					"each one destroyed",
+    ],
+    image_url: "img/tamagotchi.png",
+    rarity: "Uncommon"
   },
 ]
 
@@ -565,13 +587,22 @@ let animatednew = [
 ]
 
 let shop_items = [
+    {
+    name: "Moogle Skip",
+    text: [
+					"{C:attention}+1{} skip button",
+					"available in blind selection",
+    ],
+    image_url: "img/voucher1.png",
+    rarity: "Voucher"
+  },
   {
     name: "Moogle Shop",
     text: [
         "Enter the {C:attention}Shop{}",
         "when a {C:attention}Blind{} is skipped"
     ],
-    image_url: "img/voucher.png",
+    image_url: "img/voucher2.png",
     rarity: "Voucher"
   },
 //  {
