@@ -225,25 +225,22 @@ let jokers = [
   {
     name: "Luxord",
     text: [
-					'Gains {C:chips}+1{} Chips for each',
-					'{C:attention}second{} passed this round,',
-					'{C:red,E:2,s:1.1}self destructs at 100 Chips',
-          '',
-					'Each scored card',
-					'increases the cap by {C:green}10{}',
-          '',
-					'Each hand increases the',
-					'total Chips gained by {C:green}1{}',
-      "{C:inactive,s:0.8}I'd rather we just skip the formalities",
+            '{C:chips}+100{}',
+						'Loses {C:chips}-1{} Chips for every',
+						'{C:attention}second{} passed this round,',
+            '',
+						'Chips increase by {X:chips,C:white}X1.5{}',
+						'when a {C:attention}Boss Blind{} is defeated.',
+						"{C:inactive,s:0.8}I'd rather we just skip the formalities",
     ],
     image_url: "img/luxord.png",
-    rarity: "Common"
+    rarity: "Uncommon"
   },
   
   {
     name: "Kingdom Hearts 1",
     text: [
-      "{C:chips}+100{} Chips",
+      "{C:chips}+75{} Chips",
       "Win a blind in one",
       "hand to {C:legendary}level up{}",
       "{C:inactive}(Next level: {C:mult}+25{C:inactive} Mult)",
@@ -366,7 +363,7 @@ let jokers = [
   {
     name: "Munny Magnet",
     text: [
-      "Steel cards are moved",
+      "{C:attention}Steel{} cards are moved",
       "to the top of",
       "your {C:attention}full deck{}",
       "and give {C:money}$3{}",
@@ -392,7 +389,6 @@ let jokers = [
       "at the end of the {C:attention}shop{}",
       "gains {X:mult,C:white}X0.2{} for",
       "each one destroyed",
-      "{C:red,E:2,s:1.1}self destructs if there are no held consumables",
     ],
     image_url: "img/tamagotchi.png",
     rarity: "Uncommon"
@@ -417,8 +413,8 @@ let jokers = [
 					"from previous poker hand",
 					"to current hand",
     ],
-    image_url: "img/sora.png",
-    rarity: "Uncommon"
+    image_url: "img/com.png",
+    rarity: "Rare"
   },
 ]
 
@@ -455,17 +451,29 @@ let partners = [
     image_url: "img/MickeyPartner.png",
     rarity: "Partner"
   },
-
   {
     name: "Random Partner",
+    text: [
+					"Balances {C:purple}0%{} of",
+					"{C:chips}Chips{} and {C:mult}Mult{}",
+					"when a hand is played",
+					"Click to pay {C:money}$1{} and",
+					"increase by {C:purple}+1%{}",
+    ],
+    image_url: "img/RandomPartner.png",
+    rarity: "Partner"
+  },
+  {
+    name: "Nobody",
     text: [
       "First and Last",
       "cards {C:attention}held in hand{}",
       "count in scoring",
     ],
-    image_url: "img/RandomPartner.png",
+    image_url: "img/NobodyPartner.png",
     rarity: "Partner"
   },
+
 ]
 
 let consumables = [
