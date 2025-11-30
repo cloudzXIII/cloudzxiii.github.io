@@ -1,3 +1,3 @@
-# KHJokers.github.io
+# cloudzxiii.github.io
 
-credits to NotMario https://github.com/notmario/balatrowebsitetemplate
+credits to NotMario for the template! https://github.com/notmario/balatrowebsitetemplate
