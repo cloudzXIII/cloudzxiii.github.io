@@ -304,7 +304,7 @@ let jokers = [
       "Gains {C:money}$1-$5{} of",
       "{C:money}sell value{} at",
       "end of round",
-      "{C:green}#1# in #2#{} chance",
+      "{C:green}1 in 8{} chance",
       "this Joker is {C:red}Destroyed!{}",
       "Sell this Joker",
       "to create {C:attention,E:kh_pulse}Munny{}",
